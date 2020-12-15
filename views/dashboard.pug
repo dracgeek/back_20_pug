@@ -1,0 +1,14 @@
+extends header
+block content
+    .content-form
+        h1 Bienvenido!
+        if datos 
+            h2 #{datos.email} 
+            h2 #{datos.edad}
+            h2 Hobbies
+            ul
+                each hobbie in datos.hobbies
+                    li=hobbie
+        else 
+            h2 No hay datos.
+
